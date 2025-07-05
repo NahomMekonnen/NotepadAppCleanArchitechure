@@ -11,6 +11,9 @@ composeBom = "2024.09.00"
 hiltVersion = "2.56.2"
 kspVersion = "2.2.0-2.0.2"
 roomKtx = "2.7.2"
+navigationRuntimeAndroid = "2.9.1"
+androidxHilt = "1.2.0"
+composeMaterial = "1.8.3"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -30,11 +33,16 @@ androidx-material3 = { group = "androidx.compose.material3", name = "material3" 
 hilt-android = { group = "com.google.dagger", name = "hilt-android" ,  version.ref = "hiltVersion"}
 hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler" , version.ref = "hiltVersion"}
 androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "roomKtx" }
+androidx-navigation-runtime-android = { group = "androidx.navigation", name = "navigation-runtime-android", version.ref = "navigationRuntimeAndroid" }
+androidx-hilt = { group= "androidx.hilt", name = "hilt-navigation-compose", version.ref = "androidxHilt" }
+androidx-compose-material = { group = "androidx.compose.material", name= "material", version.ref="composeMaterial"}
+androidx-room-runtime = {group  = "androidx.room", name = "room-runtime", version.ref = "roomKtx"}
+androidx-room-compiler = {group  = "androidx.room", name = "room-compiler", version.ref = "roomKtx"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
-
 kotlinAndroidKsp = { id = "com.google.devtools.ksp", version.ref = "kspVersion" }
 hiltAndroid = { id = "com.google.dagger.hilt.android", version.ref = "hiltVersion" }
+
